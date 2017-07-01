@@ -1,0 +1,10 @@
+{
+  "name": "rice-client",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Steven Ireland",
+  "license": "Unlicensed",
+  "dependencies": {
+    "commander": "^2.10.0"
+  }
+}

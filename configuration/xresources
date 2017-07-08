@@ -1,0 +1,7 @@
+name: X Resources
+files: 
+	default:
+		- ~/.Xresources
+	
+	# TODO other platforms can define overrides to defaults
+

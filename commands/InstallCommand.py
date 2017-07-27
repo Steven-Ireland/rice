@@ -1,6 +1,7 @@
 from cement.core.controller import CementBaseController, expose
 from lib.Stow import Stow
 from lib.Git import Git
+from lib.Config import Config
 import yaml
 import os
 
@@ -30,5 +31,5 @@ class InstallCommand(CementBaseController):
             Git.clone('https://github.com/' + arg + '.git', path)
 
         # Load theme configuraiton
-        config = yaml.load(open(path + '/.rice', 'r'))
-        Stow.stow(os.path.expanduser('~'), path, config['packages'])
+        themeConfig = Config.load(path + '/.rice');
+        Stow.stow(os.path.expanduser('~'), path, themeConfig['packages'])
